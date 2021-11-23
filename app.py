@@ -1,4 +1,4 @@
-import os, json, random, string
+import os, json, random
 from flask import Flask, jsonify, make_response, request
 from http.client import HTTPException
 from urllib.error import HTTPError, URLError
@@ -93,7 +93,7 @@ def encrypt_text(text, key):
     return phrase2'''
 	
 def indice(lettre) :
-    alphabet = string.ascii_lowercase + string.digits + "&é(-è_çà)=~'#{[|\^@]}$*ù!:;,?./%"
+    alphabet = "abcdefghijklmnopqrstuvwxyz0123456789&é(-è_çà)=~'#{[|\^@]}$*ù!:;,?./%"
     if lettre in alphabet : 
         rang=alphabet.index(lettre)
         return rang
@@ -102,7 +102,7 @@ def indice(lettre) :
 
 def encrypt_text(text, key):
     key=int(key)
-    alphabet = string.ascii_lowercase + string.digits + "&é(-è_çà)=~'#{[|\^@]}$*ù!:;,?./%"
+    alphabet = "abcdefghijklmnopqrstuvwxyz0123456789&é(-è_çà)=~'#{[|\^@]}$*ù!:;,?./%"
     text=text.lower()
     n=len (alphabet)
     l=len(text)

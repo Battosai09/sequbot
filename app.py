@@ -90,34 +90,8 @@ def encrypt_text(text, key):
             phrase2=phrase2+text[i]
         else :
             phrase2=phrase2+alphabet[(ind+key)%n]+' '
-    return phrase2
+    return (print("Le chiffrement pour", text,"est", phrase2))
 	
-"""def indice(lettre) :
-    alphabet = "abcdefghijklmnopqrstuvwxyz0123456789&é(-è_çà)=~'#{[|\^@]}$*ù!:;,?./%"
-    if lettre in alphabet : 
-        rang=alphabet.index(lettre)
-        return rang
-    else :
-        return -1
-
-def encrypt_text(text, key):
-    key=int(key)
-    alphabet = "abcdefghijklmnopqrstuvwxyz0123456789&é(-è_çà)=~'#{[|\^@]}$*ù!:;,?./%"
-    #text=text.lower()
-    n=len (alphabet)
-    l=len(text)
-    phrase2=""
-	phrase_crypt_final=""
-    for i in range(0,l) :
-        ind=indice(text[i])
-        if ind==-1 :
-            phrase2=phrase2+text[i]
-        else :
-            phrase2=phrase2+alphabet[(ind+key)%n]
-	for j in range (len(phrase2)) :
-		phrase_crypt_final = phrase_crypt_final+phrase2[j]+' '
-    return phrase_crypt_final"""
-
 
 if __name__ == "__main__":
 

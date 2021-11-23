@@ -90,7 +90,7 @@ def encrypt_text(text, key):
             phrase2=phrase2+text[i]
         else :
             phrase2=phrase2+alphabet[(ind+key)%n]+' '
-    return (print("Le chiffrement pour", text,"est", phrase2))
+    return (print('Le chiffrement pour', text,'est', phrase2))
 	
 
 if __name__ == "__main__":

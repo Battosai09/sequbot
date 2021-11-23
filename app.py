@@ -42,7 +42,7 @@ def webhook():
 
         
         ## Get a specific translation and get a response
-        output = encrypt_text(text, key)
+        output = encrypt_text(text_to_encrypt, key_to_encrypt)
     
         ## Compose the response to Dialogflow
         res = {'fulfillmentText': output,

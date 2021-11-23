@@ -70,17 +70,27 @@ def webhook():
 
     return make_response(jsonify(res))
 
+def indice(lettre) :
+    alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
+    if lettre in alphabet : 
+        rang=alphabet.index(lettre)
+        return rang
+    else :
+        return -1
+
 def encrypt_text(text, key):
-    """returns encrypted text 
-ALGO DE CRYPTAGE A DEVELOPPER
-
-    """
-    reponse = "REPONSE DU CRYPTAGE"
-        
-        
-    return reponse.replace('&#39;', "'")
-
-
+    key=int(key)
+    alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
+    n=len (alphabet)
+    l=len(text)
+    phrase2=""
+    for i in range(0,l) :
+        ind=indice(text[i])
+        if ind==-1 :
+            phrase2=phrase2+text[i]
+        else :
+            phrase2=phrase2+alphabet[(ind+key)%n]
+    return phrase2.replace('&#39;', "'")
 
 
 if __name__ == "__main__":

@@ -83,7 +83,7 @@ def encrypt_text(text, key):
     alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
     n=len (alphabet)
     l=len(text)
-    phrase2="le chiffrement pour" + str(text) + " est "
+    phrase2="le chiffrement pour " + str(text) + " est "
     for i in range(0,l) :
         ind=indice(text[i])
         if ind==-1 :

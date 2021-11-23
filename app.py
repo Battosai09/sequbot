@@ -1,4 +1,4 @@
-import os, json, random
+import os, json, random, string
 from flask import Flask, jsonify, make_response, request
 from http.client import HTTPException
 from urllib.error import HTTPError, URLError
@@ -83,14 +83,14 @@ def encrypt_text(text, key):
     alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
     n=len (alphabet)
     l=len(text)
-    phrase2=""
+    phrase2="le chiffrement pour" + str(text) + " est "
     for i in range(0,l) :
         ind=indice(text[i])
         if ind==-1 :
             phrase2=phrase2+text[i]
         else :
             phrase2=phrase2+alphabet[(ind+key)%n]+' '
-    return (print('Le chiffrement pour', text,'est', phrase2))
+    return (phrase2)
 	
 
 if __name__ == "__main__":

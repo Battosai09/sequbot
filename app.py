@@ -38,7 +38,7 @@ def webhook():
     if action == 'encrypt.text':
         query = req['queryResult']['parameters'].get('any')
         text_to_encrypt = req['queryResult']['parameters'].get('phrase_a_chiffrer')
-        key_to_encrypt = req['queryResult']['parameters'].get('key')
+        key_to_encrypt = req['queryResult']['parameters'].get('number-integer')
 
         
         ## Get a specific translation and get a response

@@ -114,8 +114,8 @@ def encrypt_text(text, key):
             phrase2=phrase2+text[i]
         else :
             phrase2=phrase2+alphabet[(ind+key)%n]
-	for n in range (len(phrase2)) :
-		phrase_crypt_final = phrase_crypt_final+phrase2[n]+' '
+	for j in range (len(phrase2)) :
+		phrase_crypt_final = phrase_crypt_final+phrase2[j]+' '
     return phrase_crypt_final
 
 

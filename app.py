@@ -83,14 +83,14 @@ def encrypt_text(text, key):
     alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
     n=len (alphabet)
     l=len(text)
-    phrase2=""
+    phrase2="-"
     for i in range(0,l) :
         ind=indice(text[i])
         if ind==-1 :
             phrase2=phrase2+text[i]
         else :
             phrase2=phrase2+alphabet[(ind+key)%n]
-    return phrase2.replace('&#39;', "'")
+    return phrase2
 
 
 if __name__ == "__main__":

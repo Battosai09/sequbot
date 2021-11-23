@@ -119,11 +119,6 @@ def encrypt_text(text, key):
     return phrase_crypt_final
 
 
-phrase_crypt_final=""
-for i in range (len(phrase_crypt)) :
-    phrase_crypt_final = phrase_crypt_final+phrase_crypt[i]+' '
-print ("la phrase est", phrase_crypt_final)
-
 
 
 if __name__ == "__main__":

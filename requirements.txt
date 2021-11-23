@@ -1,6 +1,5 @@
 Flask
 gunicorn
 django-heroku
-json
 request
 random

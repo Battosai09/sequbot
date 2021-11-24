@@ -80,7 +80,7 @@ def indice(lettre) :
 
 def encrypt_text(text, key):
     key=int(key)
-	text=text.lower()
+	#text=text.lower()
     alphabet = "abcdefghijklmnopqrstuvwxyz0123456789"#&é(-è_çà)=~'#{[|\^@]}$*ù!:;,?./%"
     n=len (alphabet)
     l=len(text)

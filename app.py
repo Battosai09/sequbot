@@ -71,7 +71,7 @@ def webhook():
     return make_response(jsonify(res))
 
 def indice(lettre) :
-    alphabet = "abcdefghijklmnopqrstuvwxyz0123456789"#&é(-è_çà)=~'#{[|\^@]}$*ù!:;,?./%"
+    alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789#&é(-è_çà)=~'#{[|\^@]}$*ù!:;,?./%"
     if lettre in alphabet : 
         rang=alphabet.index(lettre)
         return rang
@@ -80,15 +80,14 @@ def indice(lettre) :
 
 def encrypt_text(text, key):
     key=int(key)
-	text2=text.lower()
-    alphabet = "abcdefghijklmnopqrstuvwxyz0123456789"#&é(-è_çà)=~'#{[|\^@]}$*ù!:;,?./%"
+    alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789#&é(-è_çà)=~'#{[|\^@]}$*ù!:;,?./%"
     n=len (alphabet)
-    l=len(text2)
-    phrase2="le chiffrement pour " + str(text2) + " est "
+    l=len(text)
+    phrase2="le chiffrement pour " + str(text) + " est "
     for i in range(0,l) :
-        ind=indice(text2[i])
+        ind=indice(text[i])
         if ind==-1 :
-            phrase2=phrase2+text2[i]
+            phrase2=phrase2+text[i]
         else :
             phrase2=phrase2+alphabet[(ind+key)%n]+' '
     return (phrase2)

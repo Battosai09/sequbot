@@ -80,15 +80,15 @@ def indice(lettre) :
 
 def encrypt_text(text, key):
     key=int(key)
-	#text=text.lower()
+	text2=text.lower()
     alphabet = "abcdefghijklmnopqrstuvwxyz0123456789"#&é(-è_çà)=~'#{[|\^@]}$*ù!:;,?./%"
     n=len (alphabet)
-    l=len(text)
-    phrase2="le chiffrement pour " + str(text) + " est "
+    l=len(text2)
+    phrase2="le chiffrement pour " + str(text2) + " est "
     for i in range(0,l) :
-        ind=indice(text[i])
+        ind=indice(text2[i])
         if ind==-1 :
-            phrase2=phrase2+text[i]
+            phrase2=phrase2+text2[i]
         else :
             phrase2=phrase2+alphabet[(ind+key)%n]+' '
     return (phrase2)

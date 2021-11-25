@@ -37,7 +37,7 @@ def webhook():
     ## Check if the request is for translation of the patient response
     if action == 'encrypt.text':
         query = req['queryResult']['parameters'].get('any')
-        text_to_encrypt = req['queryResult']['parameters'].get('phrase_a_chiffrer')
+        text_to_encrypt = req['queryResult']['parameters'].get('any')
         key_to_encrypt = req['queryResult']['parameters'].get('number-integer')
 
         

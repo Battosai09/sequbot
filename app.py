@@ -70,6 +70,7 @@ def webhook():
 
     return make_response(jsonify(res))
 
+	# Find letters rank
 def indice(lettre) :
     alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789#&é(-è_çà)=~'#{[|\^@]}$*ù!:;,?./%"
     if lettre in alphabet : 
@@ -77,7 +78,8 @@ def indice(lettre) :
         return rang
     else :
         return -1
-
+		
+	#Text cypher
 def encrypt_text(text, key):
     key=int(key)
     alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789#&é(-è_çà)=~'#{[|\^@]}$*ù!:;,?./%"
